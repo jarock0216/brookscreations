@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brooks Creations | Nail Tech</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#eee6ff;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#5f2ca5;
+  border-radius:10px;
+  border:2px solid #eee6ff;
+}
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#eee6ff;
+      color:#222;
+      line-height:1.6;
+      overflow-x: hidden;
+    }
+
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:40px 20px;
+      background: linear-gradient(rgba(70,25,120,.72), rgba(70,25,120,.72)), url("images/hero.jpg");
+      background-size:cover;
+      background-position:center;
+      color:white;
+    }
+
+    .hero {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 60px 30px;
+      border-radius: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero h1{
+  font-size: clamp(2.5rem, 8vw, 4.2rem);
+  line-height:1.1;
+  margin-bottom:15px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  background: linear-gradient(to right, #ffffff, #d8c3ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+    .hero h2{
+      font-size:1.2rem;
+      font-weight:400;
+      margin-bottom:25px;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      opacity: 0.9;
+    }
+
+    .hero-btn, .instagram-btn {
+      display:inline-block;
+      text-decoration:none;
+      padding:16px 36px;
+      border-radius:50px;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .hero-btn {
+      margin-top:20px;
+      background:#f4edff;
+      color:#5f2ca5;
+    }
+
+    .hero-btn:hover, .instagram-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    section {
+      padding: 90px 20px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.4rem;
+      color:#5f2ca5;
+      margin-bottom:50px;
+      font-weight:700;
+    }
+
+    .about-flex {
+      display:flex;
+      align-items:center;
+      gap:40px;
+      background:white;
+      padding:3.5rem;
+      border-radius:32px;
+      box-shadow: 0 15px 40px rgba(95,44,165,0.08);
+      margin:auto;
+    }
+
+    .about-img{
+      width:320px;
+      height:320px;
+      object-fit:cover;
+      border-radius:24px;
+      border: 6px solid #f4edff;
+    }
+
+    .about-text p{
+      font-size:1.05rem;
+      color:#444;
+    }
+
+    .highlight{
+      color:#5f2ca5;
+      font-weight:700;
+    }
+
+    .hours-grid, .policy-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    .hours-card, .policy-card {
+      background:white;
+      padding:35px 25px;
+      border-radius:24px;
+      text-align:center;
+      border:1px solid rgba(95,44,165,0.08);
+      transition:.3s;
+    }
+
+    .hours-card:hover, .policy-card:hover{
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(95,44,165,0.12);
+    }
+
+    .hours-card h3, .policy-card h3 {
+      color:#5f2ca5;
+      margin-bottom:12px;
+      font-size:1.2rem;
+    }
+
+    .contact-box{
+      background: linear-gradient(135deg, #5f2ca5, #461978);
+      border-radius:35px;
+      padding:50px 30px;
+      text-align:center;
+      color:white;
+      box-shadow: 0 20px 50px rgba(95,44,165,0.2);
+    }
+
+    footer{
+      background:#5f2ca5;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    @media(max-width:768px){
+      header{
+        min-height:85vh;
+        padding:20px;
+      }
+
+      .hero h1{
+        font-size:2.6rem;
+      }
+
+      .about-flex{
+        flex-direction:column;
+        text-align:center;
+        padding:25px;
+      }
+
+      .about-img{
+        width:100%;
+        max-width:280px;
+        height:auto;
+      }
+
+      section{
+        padding:65px 15px;
+      }
+    }
+    .instagram-btn{
+  margin-top:25px;
+  display:inline-block;
+  background:white;
+  color:#5f2ca5;
+  padding:14px 28px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+      <h1>BROOKS CREATIONS</h1>
+      <h2>Nail Tech</h2>
+      <p><strong>Brooklynn White</strong></p>
+      <p>Beginner Nail Artist • Home Based</p>
+      <p>Greensboro, North Carolina</p>
+      <p>$10 Non-Refundable Deposit Required</p>
+      <a class="hero-btn" href="https://instagram.com/brookscreations" target="_blank">DM To Book</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Meet Your Nail Tech</h2>
+
+        <div class="about-flex">
+          <img class="about-img" src="images/brook.jpg" alt="Brooklynn White Nail Tech">
+
+          <div class="about-text">
+            <p>Hello to all my beautiful clients and future clients! I’m Brooklynn, but y’all can call me Brook.</p>
+            <br>
+            <p>I’ve been doing nails for about 2 years and I’m still growing in my journey. Thank you to all my returning clients for trusting me to slay your nails!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hours">
+      <div class="container">
+        <h2 class="section-title">Business Hours</h2>
+
+        <div class="hours-grid">
+          <div class="hours-card">
+            <h3>Mon, Wed, Fri, Sat</h3>
+            <p>5:30 PM - 8:30 PM</p>
+          </div>
+
+          <div class="hours-card">
+            <h3>Tuesday & Thursday</h3>
+            <p>5:00 AM - 9:00 PM</p>
+          </div>
+
+          <div class="hours-card">
+            <h3>Sunday</h3>
+            <p>Closed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="policies">
+      <div class="container">
+        <h2 class="section-title">Booking Policies</h2>
+
+        <div class="policy-grid">
+
+          <div class="policy-card">
+            <h3>Cancellations</h3>
+            <p>24-hour notice required to cancel or reschedule.</p>
+          </div>
+
+          <div class="policy-card">
+            <h3>Deposits</h3>
+            <p>A <span class="highlight">$10 non-refundable deposit</span> is required for all sets.</p>
+          </div>
+
+          <div class="policy-card">
+            <h3>Late Policy</h3>
+            <p>
+              10-minute grace period. After 10 minutes, a <span class="highlight">$10 late fee</span> applies.
+            </p>
+            <p>
+              After 15 minutes, your appointment will be <span class="highlight">cancelled</span>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+  <div class="container">
+    <div class="contact-box">
+
+      <h2 class="section-title" style="color:white;">
+        Stay Connected
+      </h2>
+
+      <p><strong>Phone:</strong> (336) 417-9186</p>
+
+      <p><strong>Email:</strong> brookscreations@gmail.com</p>
+
+      <p><strong>Instagram:</strong> @brookscreations</p>
+
+      <p><strong>TikTok:</strong> @brookscreations</p>
+
+      <a class="instagram-btn"
+         href="https://instagram.com/brookscreations"
+         target="_blank">
+        Book on Instagram
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Thank You For Booking ✨ | Greensboro, NC</p>
+  </footer>
+
+</body>
+</html>
